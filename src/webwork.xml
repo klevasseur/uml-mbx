@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE webwork SYSTEM "http://webwork.uml.edu/webwork2/schema/dtd/webwork.dtd ">
+<!-- This file is part of the book                 -->
+<!-- /schema/dtd/webwork.dtd                                              -->
+<!--   UMass Lowell Mathbook XML   -->
+<!--                                               -->
+<chapter>
+<title>WeBWork</title>
+<section xml:id="webwork">
+<title>WeBWork experiments</title>
+   <exercises>      
+   <exercise xml:id="ww-graphical-antiderivatives">
+          <title>Graphical Antiderivatives</title>
+                <statement>
+                <p>This will come out of WeBWork.</p>
+                </statement>
+                <webwork source="Library/Rochester/setDiscrete9Counting/ur_dis_9_2.pg" height="750"/>
+   </exercise>
+<!-- 
+http://webwork.uml.edu/webwork2/92_500_Discrete_Structures/instructor/config/?effectiveUser=klevasseur&displayMode=images&user=klevasseur&theme=&key=AYy1VEbCRuSZES6vvDvYNwdxI2JY2FQP
+ -->
+ </exercises>
+</section>
+</chapter>

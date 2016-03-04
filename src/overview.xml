@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- This file is part of the book                 -->
+<!--                                               -->
+<!--   UMass Lowell Mathbook XML   -->
+<!--                                               -->
+
+
+<chapter xml:id="overview" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Overview</title>
+
+	<introduction>
+		<p>This chapter gives an overview of MathBook XML.  For further details, visit the MathBook XML web site: 	http://mathbook.pugetsound.edu.</p>
+		<p>Mathbook XML (MBX) is a lightweight XML application for authors of scientific articles, textbooks and monographs. Some key features:
+		<ol>
+		<li>MBX allows for the stucture of XML with the more concise mathematical notation of LaTeX.</li>
+		<li>Outputs to a variety of formats including html and LaTeX.</li>
+		<li>MBX makes use of knowls in html output.</li>
+		<li>html output resizes nicely from desktop to mobile devices.</li>
+		</ol>
+		This introduction concentrates on MBX and conversion to html.
+		</p>
+		<p>A few other comments:
+<ul><li>If you have a linux or Mac OS X computer, you should already have xsltproc, which you need to do conversions from MBX.  More information on Windows is available on the MBX website. </li>
+<li>You need to have some familiarity with terminal commands - there isn't a GUI interface at this time.</li>
+</ul>
+</p>
+	</introduction>
+<section xml:id="mbx-structure">
+		<title>Structure of an MBX book</title>
+<p>Any sizable work should be broken into chapter or section chunks to avoid overly long files.  A basic top level file might look something like this:</p>
+<p>
+<m>\begin{verbatim}<xi:include href="./template1.txt" parse="text"/>\end{verbatim}</m>
+</p>
+<p>The first line should appear as the first line of all files.  Otherwise the "includes" within the <c>book</c> tags are dropped into the files in the order in which they are listed. Each chapter might have structure something like what follows, with a file for each section.  If chapters are relatively short (as with this document) they might be contained within a single file. </p>
+<p>
+<m>\begin{verbatim}<xi:include href="./template2.txt" parse="text"/>\end{verbatim}</m>
+</p>
+<p>Then a section would look like this:
+<m>\begin{verbatim}<xi:include href="./template3.txt" parse="text"/>\end{verbatim}</m>
+</p>
+<p>We're now finally down to the level of content.  In subsequent chapters, we will describe the basic structures of these elements.  Among the items we might see in any section are</p>
+<ul><li>Further structural elements with <c>subsection</c> and <c>subsubsection</c> tags.</li>
+<li>Definitions, with the <c>definition</c> tag.</li>
+<li>Examples, with the <c>example</c> tag.</li>
+<li>Theorems, with the <c>theorem</c> tag.</li>
+<li>Figures, with the <c>figure</c> tag.</li>
+<li>Sage cells, with the <c>sage</c> tag.</li>
+</ul>
+<p>In mathematics, this is just about all you need, but XML allows for unlimited possible structures that are in common use in science, engineering or even the arts.  For example, I've read that there is likely to be a <c>molecule</c> tag in the near future.</p>
+</section>
+<section xml:id="html-conversion"><title>The Conversion Process to html</title>
+<p>To convert source code to html you use xsltproc.
+<ul>
+<li>XSL stands for EXtensible Stylesheet Language, and is a style sheet language for XML documents.</li>
+<li>xsltproc is a command line tool for applying XSLT stylesheets to XML documents.    More info: http://xmlsoft.org/XSLT/xsltproc.html</li>
+<li>An example of  very basic <c>xsltproc</c> command is 
+<c>xsltproc --xinclude ../../mathbook/xsl/mathbook-html.xsl   src/my_textbook.xml</c>
+<ol><li><c>--include</c>  is needed if you are going to include files, as described in <xref ref="mbx-structure"  /></li>
+   <li>Next, you specify the stylesheet path.</li>
+   <li>Finally, the path to the source code.</li>
+   <li>The html files go into your working directory.</li></ol></li>
+</ul>
+</p>
+</section>
+<section xml:id="latex-conversion"><title>The Conversion Process to LaTeX</title>
+<p>To be added</p>
+</section>
+</chapter>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- This file is part of the book                 -->
+<!--                                               -->
+<!--   UMass Lowell Mathbook XML   -->
+<!--                                               -->
+
+
+<chapter xml:id="features" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>MBX Features</title>
+
+<introduction>
+		<p>This chapter consists of a series of pages, each highlighting a few of the elements that make up a complete book or article. </p>
+		</introduction>
+<xi:include href="./def-ref-exer.xml" />
+<xi:include href="./theorem.xml" />
+
+</chapter>

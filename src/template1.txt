@@ -1,0 +1,15 @@
+
+
+		<?xml version="1.0" encoding="UTF-8"?>
+		<mathbook  xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US"> 
+			\<xi:include href="./bookinfo.xml" /\>    <!--ISBN, website, other metadata -->
+			<book xml:id="uml-mbx">
+				<title>My Text</title>	
+				<subtitle>A Theory of Everything</subtitle>
+				<xi:include href="./frontmatter.xml" />
+				<xi:include href="./chapter1.xml" />
+				<xi:include href="./chapter2.xml" />
+				<xi:include href="./etc.xml" />
+			</book>
+		</mathbook>
+		

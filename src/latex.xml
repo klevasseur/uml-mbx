@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file is part of the book                 -->
+<!--                                               -->
+<!--   UMass Lowell Mathbook XML   -->
+<!--                                               -->
+<chapter>
+<title>LaTeX</title>
+<section xml:id="latex">
+<title>LaTeX</title>
+<p>Mathematical content should be displayed using LaTeX.  This is accomplished using either <c>&lt;m&gt;&lt;/m&gt;</c> for inline expressions or <c>&lt;me&gt;&lt;/me&gt;</c> for display expressions.</p>
+
+<p>For those who are new to LaTeX, several types of expressions appear in this section.  The source code for this document can be consulted to see the LaTeX code to realize them. </p>
+
+<theorem xml:id="binomial-coefficient-formula"><title>Binomial Coefficient Formula</title><statement>
+If <m>n</m> and <m>k</m> are nonnegative integers with <m>0 \leq k \leq n</m>, then the number <m>k</m>-element subsets of an <m>n</m> element set is equal to <me>\binom{n}{k} = \frac{n!}{(n-k)! \cdot k!} </me></statement>
+</theorem>
+<p>A simple array of sets.</p>
+<me>
+\begin{array}{cc}
+ \{1,2\} &amp; \{3,4\} \\
+ \{1,3\} &amp; \{2,4\} \\
+ \{1,4\} &amp; \{2,3\} \\
+ \{2,3\} &amp; \{1,4\} \\
+ \{2,4\} &amp; \{1,3\} \\
+ \{3,4\} &amp; \{1,2\} \\
+\end{array}
+</me> 
+<me>\binom{5}{0} x^5+\binom{5}{1} x^4 y+\binom{5}{2} x^3 y^2+\binom{5}{3} x^2 y^3+\binom{5}{4} x
+  \binom{5}{5} y^4+y^5
+</me>
+<p>Here is a chain of equalities:</p>
+
+<me>\begin{split}
+ \lvert A \rvert &amp; =  \lvert A_1 \cup A_2 \cup A_3 \rvert \\ 
+ &amp; = \lvert A_1 \rvert + \lvert A_2 \rvert + \lvert A_3 \rvert - \textrm{repeats} \\
+ &amp; = \lvert A_1 \rvert + \lvert A_2 \rvert + \lvert A_3 \rvert - \textrm{duplicates} + \textrm{triplicates}  \\
+ &amp; = \lvert A_1 \rvert + \lvert A_2 \rvert + \lvert A_3 \rvert - (\lvert A_1 \cap A_2 \rvert + \lvert A_1 \cap A_3 \rvert+ \lvert A_2 \cap A_3 \rvert) + \lvert A_1 \cap A_2 \cap A_3 \rvert  \\
+ &amp; = 75 + 60 + 55 - 25 - 12 - 15 + 10 = 148 \\
+\end{split}
+</me>
+<p>Here's a truth table generated in LaTeX:
+<me>
+\begin{array}{cccc}
+ p &amp; q &amp; \neg (p\land q) &amp; \neg p\lor \neg q \\
+ \hline
+ 0 &amp; 0 &amp; 1 &amp; 1 \\
+ 0 &amp; 1 &amp; 1 &amp; 1 \\
+ 1 &amp; 0 &amp; 1 &amp; 1 \\
+ 1 &amp; 1 &amp; 0 &amp; 0 \\
+\end{array}
+</me>
+</p>
+</section>
+</chapter>

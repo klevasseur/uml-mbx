@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- This file is part of the book                 -->
+<!--                                               -->
+<!--   Applied Discrete Structures   -->
+<!--                                               -->
+<!-- Ken Levasseur and Al Doerr     -->
+<!-- See the file COPYING for copying conditions.  -->
+
+<frontmatter xml:id="index" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<titlepage>
+
+		<author>
+			<personname>Ken Levasseur</personname>
+			<department>Department of Mathematical Sciences</department>
+			<institution>University of Massachusetts Lowell</institution>
+			<email>kenneth_levasseur@uml.edu</email>
+		</author>
+
+		<date>January 4, 2016</date>
+
+
+	</titlepage>
+
+	<colophon>
+
+		<copyright>
+			<year>2016</year>
+			<holder>Ken Levasseur</holder>
+			<minilicense>Creative Commons Attribution-Noncommercial-ShareAlike 3.0 United States License.</minilicense>
+			<creativecommons BY="yes" NC="yes" SA="yes" version="4.0"/>
+			<shortlicense><p><em>UMass Lowell - Mathbook XML</em> by Ken Levasseur is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States License. You are free to:
+			<ul>
+			<li>Share — copy and redistribute the material in any medium or format</li>
+			<li>Adapt — remix, transform, and build upon the material</li>
+			</ul>
+			You may not use the material for commercial purposes.  The licensor cannot revoke these freedoms as long as you follow the license terms.</p>
+			</shortlicense>
+		</copyright>
+
+	</colophon>
+
+	<!-- Accepted order: acknowledgements, forewords, prefaces -->
+
+	<acknowledgement>
+
+		<p>We would like to acknowledge the following individuals for helpful comments and suggestions. </p>
+
+		<ul>
+			<li>Rob Beezer and everyone else on Google's mathbook-xml-support group.</li>
+		</ul>
+
+
+	</acknowledgement>
+
+	<preface>
+<p>This work is partially supported by a grant from the UMass Lowell Committee on Transformational Education.  My objective in writing this to to help me keep track of the  processes involved in writing source code for MathBook XML and converting it to html and other formats.  In addition, it it is a first draft for a potential workshop at UML.   It's both a positive and negative fact that my expertise in XML and associated tools is limited. On one hand, progress will be slow.  On the other hand, I expect that I will be forced to document some <q>obvious</q> things that the beginner who reads this will find useful.</p>
+
+<p>Suggestions and corrections are welcome!</p>
+
+		<blockquote>
+			Ken Levasseur <br />
+			Lowell MA
+		</blockquote>
+
+	</preface>
+
+</frontmatter>

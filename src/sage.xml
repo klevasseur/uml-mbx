@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE webwork SYSTEM "http://webwork.uml.edu/webwork2/schema/dtd/webwork.dtd ">
+<!-- This file is part of the book                 -->
+<!-- /schema/dtd/webwork.dtd                                              -->
+<!--   UMass Lowell Mathbook XML   -->
+<!--                                               -->
+<chapter>
+<title>Sage</title>
+<introduction>Sage (<url href="http://sagemath.org">sagemath.org</url>) is a free, open source, software system for mathematics. Sage can be used either on your own computer, a local server, or on SageMathCloud (<url href="https://cloud.sagemath.com">https://cloud.sagemath.com</url>). </introduction>
+<section xml:id="sage_cell">
+<title>Sage Cell Calculations</title>
+<p>Sage cells are easily inserted into the text with a <m>\texttt{sage}</m> tag. Within that tag, Sage code is placed within an <m>\texttt{input}</m>.  Within the <m>\texttt{input}</m> tag, line breaks and indentation is maintained.  The appeal to these cells is that the reader can edit default text to experiment with the concept that is being introduced.</p>
+<p>Here is basic calculation from Chapter 2.  It is part of the text, but using an XML id on the paragraph that it is contained in, a link to this cell can be inserted at exercises where similar calculations would need to be done.</p>
+<sage>
+<input>
+binomial(52,13)*binomial(39,13)*binomial(26,13)
+</input>
+</sage>
+<p>Here is a graphic that appears in Chapter 1 of Applied Discrete Structures.  Graphics calculations like this can be inserted into source code and through a Python script, the appropriate type of image can be created.   For example, svg files are ideally created for html conversion.  See <xref ref="sageplot" autoname="yes" /> for more on the conversion process.</p>
+<sage>
+<input>
+m=2
+scale = 1.7
+sx=3
+sy=2
+centers = [(cos(n*2*pi/m), sin(n*2*pi/m)) for n in range(m)]
+clr = ['blue', 'blue', 'green']
+G = Graphics()
+r=lambda x,y:(x-centers[0][0])^2+(y-centers[0][1])^2 &lt; scale^2  or (x-centers[1][0])^2+(y-centers[1][1])^2 &lt; scale^2 
+G+=region_plot(r,(-sx,sx),(-sy,sy),plot_points=200,incol='lightblue',axes=False)
+for i in range(m):
+	G += circle(centers[i], scale)
+for i in range(m):
+	G += circle(centers[i], scale)
+G+=line([[-sx,-sy],[sx,-sy],[sx,sy],[-sx,sy],[-sx,-sy]],rgbcolor=(0,0,0))
+G+=text('B',centers[0],fontsize='x-large')
+G+=text('A',centers[1],fontsize='x-large')
+G.show()
+</input>
+</sage>
+
+</section>
+<section xml:id="sageplot"><title>Using sageplot to create images</title>
+<p>Here is an figure that contains an image created by sage.  The same code as in the second sage cell example is enclosed within a <m>	\texttt{sageplot}</m> tag.  However, instead of the last expression being G.show(), the show method is dropped G is the result.  In other words, the processor for creating the images needs a graphics expression, not the image the graphics produce. </p>
+<p>This command creates svg files from this specific document document:</p>
+<p><c>python script/mbx -c sageplot -d ~/Documents/uml-mbx/src/images -f svg -vv ~/Documents/uml-mbx/src/sage.xml</c></p>
+<p>Currently, the script must be run so that the current directory is mathbook. The image that is produced eventually should reside in a directory called images that is in the same directory as the source code.</p>
+            <figure xml:id="venn_diagram_union">
+                    <caption>Venn Diagram for the union <m>A \cup  B</m> </caption>
+                    <image xml:id="sageplot-venn-union">
+                        <description>A two set Venn Diagram for union</description>
+                        <sageplot>
+								m=2
+								scale = 1.7
+								sx=3
+								sy=2
+								centers = [(cos(n*2*pi/m), sin(n*2*pi/m)) for n in range(m)]
+								clr = ['blue', 'blue', 'green']
+								G = Graphics()
+								r=lambda x,y:(x-centers[0][0])^2+(y-centers[0][1])^2 &lt; scale^2  or (x-centers[1][0])^2+(y-centers[1][1])^2 &lt; scale^2 
+								G+=region_plot(r,(-sx,sx),(-sy,sy),plot_points=200,incol='lightblue',axes=False)
+								for i in range(m):
+									G += circle(centers[i], scale)
+								for i in range(m):
+									G += circle(centers[i], scale)
+								G+=line([[-sx,-sy],[sx,-sy],[sx,sy],[-sx,sy],[-sx,-sy]],rgbcolor=(0,0,0))
+								G+=text('B',centers[0],fontsize='x-large')
+								G+=text('A',centers[1],fontsize='x-large')
+								G
+                        </sageplot>
+                    </image>
+                </figure>
+<p>Where should your images go?    The python command above actually puts figures in the source code directory, in a directory called <m>	\texttt{images}</m>  If you are going to convert your source code to html, the images directory should be moved to the same directory as the html files.</p>
+</section>
+</chapter>

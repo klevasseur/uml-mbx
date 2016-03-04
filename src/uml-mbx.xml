@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book                  -->
+<!--                                                -->
+<!--   UML Mathbook XML   -->
+<!--                                                -->
+<!-- by  Ken Levasseur         -->
+<!-- licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States License  -->
+
+<!-- USE XINCLUDE SWITCH ON XSLTPROC -->
+
+<!-- Use XSL stylesheets to create subsets          -->
+<!--    Important: Always process all of the source -->
+<!--    to preserve numbering and cross-references! -->
+<!--    So it is never advisable to edit this file  -->
+
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
+  	<xi:include href="./bookinfo.xml" />    <!--ISBN, website, other metadata -->
+    
+	<book xml:id="uml-mbx">
+        <title>UMass Lowell Mathbook XML</title>
+        <subtitle>a guide to creating open source STEM materials.</subtitle>
+ 		<xi:include href="./frontmatter.xml" />
+ 		<xi:include href="./overview.xml" />
+ 		<xi:include href="./latex.xml" />
+ 		<xi:include href="./mbx-features.xml" />
+ 		<xi:include href="./sage.xml" />
+   	<xi:include href="./backmatter.xml" />
+   </book>
+
+</mathbook>

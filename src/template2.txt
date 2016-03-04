@@ -1,0 +1,13 @@
+
+
+		<?xml version="1.0" encoding="UTF-8"?>
+		<chapter xml:id="chapter1"><title>My First Chapter</title>
+			<introduction><p>This is what's in the chapter...</p></introduction>
+			<section xml:id="section1a"><title>The First Topic</title>
+			<xi:include href="./section1a.xml" />
+			<xi:include href="./section1b.xml" />
+			<xi:include href="./section1c.xml" />
+			<xi:include href="./exercises1.xml" />
+			</section>
+		</chapter>
+		

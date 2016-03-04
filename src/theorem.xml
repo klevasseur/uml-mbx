@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file is part of the book                 -->
+<!--                                               -->
+<!--   UMass Lowell Mathbook XML   -->
+<!--                                               -->
+<section xml:id="theorem">
+		<title>Theorems</title>
+		<introduction>
+		<p>Here, we show demonstrate the general format of a theorem</p>
+		</introduction>
+<p>A theorem is contained within a <m>\texttt{theorem}</m> tag, normally with two inner tags: <m>\texttt{statement}</m> and <m>\texttt{proof}</m>.  By default, the proof will be a knowl.</p>
+<p><c><ul type="none"><li>&lt;theorem&gt;</li>
+<li>&lt;statement&gt;Given ..., then ...&lt;/statement&gt;</li>
+<li>&lt;proof&gt;Assume ...., therefore... .&lt;/proof&gt;</li>
+<li>&lt;/theorem&gt; <m>\blacksquare</m></li></ul>
+</c></p>
+<p>Open question: I've used the Latex <m>\texttt{\blacksquare}</m> at the end of the proof.   Is there a way to automatically have an "end of proof" symbol appear at the end of proofs?  In a knowl it might not be needed? </p>
+<theorem xml:id="bijection-onetoone"><title>Charactorization of bijective functions</title>
+<statement><p>Let <m>f: A \rightarrow A</m>.  There exists an inverse of <m>f</m>  if and only if <m>f</m> is a bijection; i. e. <m>f</m> is one-to-one and onto. </p></statement>
+<proof><p> (<m>\Rightarrow</m>)   In this half of the proof, assume that <m>f^{-1}</m>  exists and we must prove that f
+ is one-to-one and onto.  To do so, it is convenient for us to use the relation notation, where <m>f(s)=t</m>
+ is equivalent to <m>(s,t)\in f</m>.</p>
+ <p>To prove that <m>f</m> is one-to-one, assume that <m>f(a)=f(b) = c</m>.  Alternatively, that means <m>(a, c)</m>
+ and <m>(b, c)</m> are elements of <m>f</m>.  We must show that <m>a=b</m>.  
+ 	 <me>(a, b), (c, b) \in  f \Rightarrow  (c, a), (c,b) \in f^{-1}</me>
+By the fact that <m>f^{-1}</m> is a function and <m>c</m> cannot have two images, <m>a</m> and <m>b</m>  must be equal, so <m>f</m> is one-to-one. </p>  
+<p>Next, to prove that <m>f</m> is onto, observe that for <m>f^{-1}</m> to be a function, it must use all of its domain, namely <m>A</m>.  Let <m>b</m> be any element of <m>A</m>. Then <m>b</m> has an image under  <m>f^{-1}</m>, <m>f^{-1}(b)</m>. Another way of writing this is <m>(b,f^{-1}(b)) \in f^{-1}</m>, By the definition of the inverse, this is equivalent to <m>(f^{-1}(b),b) \in f</m>. Hence, <m>b</m> is in the range of <m>f</m>.  Since <m>b</m> was chosen arbitrarily, this shows that the range of <m>f</m> must be all of <m>A</m> and so <m>f</m> is onto.</p>
+<p>  <m>\Rightarrow</m>  Assume <m>f</m> is one-to-one and onto and we are to prove <m>f^{-1}</m> exists. We leave this half of the proof to the reader. <m>\blacksquare</m></p>
+</proof>
+</theorem>
+ 
+
+
+
+</section>

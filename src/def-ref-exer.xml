@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file is part of the book                 -->
+<!--                                               -->
+<!--   UMass Lowell Mathbook XML   -->
+<!--                                               -->
+<section xml:id="definition-xref-exercise">
+	<title>Definitions, referencing, and exercises</title>
+
+	<introduction>
+		<p>There are three features of Mathbook XML highlighted in this chapter.
+		<ol>
+		<li>Definitions - we make a basic definition that includes an xml id for easy referencing.</li>
+		<li>Exercises - including hints and solutions.</li>
+		<li>Cross-referencing - making use of an xml id to create a knowl that reminds the reader of a definition that is made in a different part of the document.</li>
+		</ol>
+		</p>
+	</introduction>
+<subsection>
+		<title>A definition and exercise</title>
+		
+<p> This is the general form of a definition, with the notation section optional:<c><ul><li>&lt;definition xml:id="xxx"&gt;</li>
+<li>&lt;title&gt;xxx&lt;/title&gt;</li>
+<li>&lt;statement&gt;&lt;/statement&gt;</li>
+<li>&lt;notation&gt;</li>
+<li>&lt;usage&gt; actual-notation &lt;/usage&gt;&lt;description&gt; verbal-description&lt;/description&gt;</li>
+<li>&lt;/notation&gt;</li>
+<li>&lt;/definition&gt;</li>
+</ul></c></p>
+<p>The tag that opens the following definition is <c>&lt;definition xml:id="lattice-points"&gt;</c>.  In the exercise below we reference this definition with the tag <c>&lt;xref ref="lattice-points" autoname="title" /&gt;</c>. With the value of title, the knowl text is the title of the referenced item, in this case "lattice points."  The other possible <c>autoname</c>values are 
+<ul>
+		<li>yes - displays the type of item (Definition, Example, Theorem, ...) and then the number of that item.</li>
+		<li>no - just displays the item number</li>
+		<li>plural - Is a variation on "title" that pluralizes the title.   I wasn't aware of this when I wrote the code for this example.  If I had used this option, I could have used the more natural id value "lattice point" and the knowl would have added the 's' at the end.</li>
+</ul>
+You can set the default when running <c>xsltproc</c> with the argument <c>--stringparam autoname 'yes'</c>, where 'yes' can be any of the values mentioned above. 
+</p>
+<definition xml:id="lattice-points">
+<title>Lattice Points</title>
+<statement>The lattice points in <m>d</m> dimensions, <m>d</m> a positive integer, are the points in <m>d</m>-dimensional space with integer coordinates.</statement>
+</definition>
+
+<p>The following definition has two notation tags, each is listed in the notations section.</p>
+<definition  xml:id="set_complement.">
+<title>Complement of a set</title>
+<statement>Let <m> A</m> and <m> B</m> be sets. The complement of <m> A</m> relative to <m> B</m> (notation
+<m>B - A</m>) is the set of elements that are in <m> B</m> and not in <m> A</m>. That is, <m>B-A=\{x: x\in B \textrm{ and } x\notin A\}</m>. If <m>
+U</m> is the universal set, then <m>U-A</m> is denoted by <m>A^c</m> and is called simply the complement of <m> A</m>. <m>A^c=\{x\in U : x\notin A\}</m>. 
+</statement>
+<notation><m>B - A</m>,<m>A^c</m>
+	  <usage>B - A</usage>
+	  <description>
+	 The complement of <m>A</m> relative to <m>B</m>.    	
+	  </description>
+</notation>
+<notation>
+	  <usage>A^c</usage>
+	  <description>
+	 The complement of <m>A</m> relative to the universe.  	
+	  </description>
+</notation>
+</definition> 
+		<p>...many lines later or in a different chapter, the following exercise may appear.....</p>
+</subsection>
+<exercises>
+<title>Some Exercises</title>
+<exercise>
+<statement>
+Given nine <xref ref="lattice-points"  autoname="title" /> in three dimensions, prove that there are at least two for which their midpoint is also a lattice point.
+</statement>
+<hint>Think about the odd-even parity of the nine points</hint>
+<solution>There are eight different odd/even parity "signature" of a point.  For example <m>(1,4,-2)</m> has the signature (odd, even, even).  Since we are given nine points, the pigeon-hole principle guarantees us that there must be two different points with the same signature.   The midpoint of two lattice points with the same signatures is a lattice point since   <m>\frac{odd + odd}{2}</m> and <m>\frac{even + even}{2}</m> are both integers. 
+</solution>
+</exercise>
+
+</exercises>
+</section>
