@@ -52,7 +52,8 @@
 <section xml:id="html-conversion"><title>The Conversion Process to html</title>
 <p>To convert source code to html you use xsltproc.
 <ul>
-<li>XSL stands for EXtensible Stylesheet Language, and is a style sheet language for XML documents.</li>
+<li>XSL (for eXtensible Stylesheet Language) is a style sheet language for XML documents.</li>
+<li>XSLT (for eXtensible Stylesheet Language Transformations) is a language for transforming XML documents into other XML documents, or other formats such as HTML for web pages</li>
 <li>xsltproc is a command line tool for applying XSLT stylesheets to XML documents.    More info: http://xmlsoft.org/XSLT/xsltproc.html</li>
 <li>An example of  very basic <c>xsltproc</c> command is 
 <c>xsltproc --xinclude ../../mathbook/xsl/mathbook-html.xsl   src/my_textbook.xml</c>

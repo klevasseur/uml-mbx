@@ -42,7 +42,7 @@ G.show()
 </section>
 <section xml:id="sageplot"><title>Using sageplot to create images</title>
 <p>Here is an figure that contains an image created by sage.  The same code as in the second sage cell example is enclosed within a <m>	\texttt{sageplot}</m> tag.  However, instead of the last expression being G.show(), the show method is dropped G is the result.  In other words, the processor for creating the images needs a graphics expression, not the image the graphics produce. </p>
-<p>This command creates svg files from this specific document document:</p>
+<p>This command creates svg files from this specific document:</p>
 <p><c>python script/mbx -c sageplot -d ~/Documents/uml-mbx/src/images -f svg -vv ~/Documents/uml-mbx/src/sage.xml</c></p>
 <p>Currently, the script must be run so that the current directory is mathbook. The image that is produced eventually should reside in a directory called images that is in the same directory as the source code.</p>
             <figure xml:id="venn_diagram_union">

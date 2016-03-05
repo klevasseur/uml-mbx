@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-03-05T09:10:50-05:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UML-MBX Structure of an MBX book</title><meta name="Keywords" content="Authored in MathBook XML"></meta><meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"></meta><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64">
+$(function () {
+    // Make *any* div with class 'sage-compute' an executable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-compute',
+                           linked: true,
+                           evalButtonText: 'Evaluate'});
+});
+$(function () {
+    // Make *any* div with class 'sage-display' a visible, uneditable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-display',
+                           editor: 'codemirror-readonly',
+                           hide: ['evalButton', 'editorToggle', 'language']});
+});
+    </script><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script><link xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css"></link><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" type="text/javascript" src="https://aimath.org/knowl.js"></script><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" src="https://aimath.org/mathbook/js/Mathbook.js"></script><link xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic|Source+Code+Pro:400" rel="stylesheet" type="text/css"></link><link xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css"></link><link xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css"></link></head><body class="mathbook-book has-toc has-sidebar-left"><div xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }\)</div><header id="masthead"><div class="banner"><div class="container"><a id="logo-link" href="http://faculty.uml.edu/klevasseur/uml-mbx/" target="_blank"><img src="http://faculty.uml.edu/klevasseur/images/small_umllogo.gif"></img></a><div class="title-container"><h1 class="heading"><span class="title">UMass Lowell Mathbook XML</span><span class="subtitle">a guide to creating open source STEM materials.</span></h1><p class="byline">Ken Levasseur</p></div></div></div><nav xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" id="primary-navbar"><div class="container"><div class="navbar-top-buttons"><button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><a class="previous-button toolbar-item button" href="overview.html">Previous</a><a class="up-button button toolbar-item" href="overview.html">Up</a><a class="next-button button toolbar-item" href="html-conversion.html">Next</a></div><button class="sidebar-right-toggle-button button active">Annotations</button></div><div class="navbar-bottom-buttons toolbar toolbar-divisor-4"><button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="overview.html">Previous</a><a class="up-button button toolbar-item" href="overview.html">Up</a><a class="next-button button toolbar-item" href="html-conversion.html">Next</a></div></div></nav></header><div class="page"><aside xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" id="sidebar-left" class="sidebar"><div class="sidebar-content"><nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2><ul><li><a href="colophon-1.html">Colophon</a></li><li><a href="acknowledgement-1.html">Acknowledgements</a></li><li><a href="preface-1.html">Preface</a></li></ul><h2 class="link active"><a href="overview.html"><span class="codenumber">1</span><span class="title">Overview</span></a></h2><ul><li><a href="mbx-structure.html" class="active">Structure of an MBX book</a></li><li><a href="html-conversion.html">The Conversion Process to html</a></li><li><a href="latex-conversion.html">The Conversion Process to LaTeX</a></li></ul><h2 class="link"><a href="chapter-2.html"><span class="codenumber">2</span><span class="title">LaTeX</span></a></h2><ul><li><a href="latex.html">LaTeX</a></li></ul><h2 class="link"><a href="features.html"><span class="codenumber">3</span><span class="title">MBX Features</span></a></h2><ul><li><a href="definition-xref-exercise.html">Definitions, referencing, and exercises</a></li><li><a href="theorem.html">Theorems</a></li></ul><h2 class="link"><a href="chapter-4.html"><span class="codenumber">4</span><span class="title">Sage</span></a></h2><ul><li><a href="sage_cell.html">Sage Cell Calculations</a></li><li><a href="sageplot.html">Using sageplot to create images</a></li></ul><h2 class="link"><a href="backmatter.html"><span class="title">Reference</span></a></h2><ul><li><a href="chapter-5.html">Hints and Solutions to Selected Exercises</a></li><li><a href="chapter-6.html">Notation</a></li><li><a href="chapter-7.html">Lists	 of Elements</a></li></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></img></a></nav></div></div></aside><main class="main"><div id="content" class="mathbook-content"><section xmlns:b64="https://github.com/ilyakharlamov/xslt_base64" class="section" id="mbx-structure"><header><h1 class="heading" alt="Section 1.1 Structure of an MBX book" title="Section 1.1 Structure of an MBX book"><span class="type">Section</span><span class="codenumber">1.1</span><span class="title">Structure of an MBX book</span><a href="mbx-structure.html" class="permalink">¶ permalink</a></h1></header><p>Any sizable work should be broken into chapter or section chunks to avoid overly long files.  A basic top level file might look something like this:</p><p>
+\(\begin{verbatim}
+
+		&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+		&lt;mathbook  xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US"&gt; 
+			\&lt;xi:include href="./bookinfo.xml" /\&gt;    &lt;!--ISBN, website, other metadata --&gt;
+			&lt;book xml:id="uml-mbx"&gt;
+				&lt;title&gt;My Text&lt;/title&gt;	
+				&lt;subtitle&gt;A Theory of Everything&lt;/subtitle&gt;
+				&lt;xi:include href="./frontmatter.xml" /&gt;
+				&lt;xi:include href="./chapter1.xml" /&gt;
+				&lt;xi:include href="./chapter2.xml" /&gt;
+				&lt;xi:include href="./etc.xml" /&gt;
+			&lt;/book&gt;
+		&lt;/mathbook&gt;
+		
+\end{verbatim}\)
+</p><p>The first line should appear as the first line of all files.  Otherwise the "includes" within the <tt class="code-inline">book</tt> tags are dropped into the files in the order in which they are listed. Each chapter might have structure something like what follows, with a file for each section.  If chapters are relatively short (as with this document) they might be contained within a single file. </p><p>
+\(\begin{verbatim}
+
+		&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+		&lt;chapter xml:id="chapter1"&gt;&lt;title&gt;My First Chapter&lt;/title&gt;
+			&lt;introduction&gt;&lt;p&gt;This is what's in the chapter...&lt;/p&gt;&lt;/introduction&gt;
+			&lt;section xml:id="section1a"&gt;&lt;title&gt;The First Topic&lt;/title&gt;
+			&lt;xi:include href="./section1a.xml" /&gt;
+			&lt;xi:include href="./section1b.xml" /&gt;
+			&lt;xi:include href="./section1c.xml" /&gt;
+			&lt;xi:include href="./exercises1.xml" /&gt;
+			&lt;/section&gt;
+		&lt;/chapter&gt;
+		
+\end{verbatim}\)
+</p><p>Then a section would look like this:
+\(\begin{verbatim}
+
+		&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+		&lt;section xml:id="section1a"&gt;&lt;title&gt;First Topic of Chapter 1&lt;/title&gt;
+			&lt;introduction&gt;&lt;p&gt;This is what's in this section (optional)...&lt;/p&gt;&lt;/introduction&gt;
+				&lt;!-- various content elements go here. --&gt;
+		&lt;/section&gt;
+\end{verbatim}\)
+</p><p>We're now finally down to the level of content.  In subsequent chapters, we will describe the basic structures of these elements.  Among the items we might see in any section are</p><ul style="list-style-type: disc;"><li id="li-10">Further structural elements with <tt class="code-inline">subsection</tt> and <tt class="code-inline">subsubsection</tt> tags.</li><li id="li-11">Definitions, with the <tt class="code-inline">definition</tt> tag.</li><li id="li-12">Examples, with the <tt class="code-inline">example</tt> tag.</li><li id="li-13">Theorems, with the <tt class="code-inline">theorem</tt> tag.</li><li id="li-14">Figures, with the <tt class="code-inline">figure</tt> tag.</li><li id="li-15">Sage cells, with the <tt class="code-inline">sage</tt> tag.</li></ul><p>In mathematics, this is just about all you need, but XML allows for unlimited possible structures that are in common use in science, engineering or even the arts.  For example, I've read that there is likely to be a <tt class="code-inline">molecule</tt> tag in the near future.</p></section></div></main></div></body></html>

@@ -30,14 +30,14 @@ If <m>n</m> and <m>k</m> are nonnegative integers with <m>0 \leq k \leq n</m>, t
 </me>
 <p>Here is a chain of equalities:</p>
 
-<me>\begin{split}
+<p><me>\begin{split}
  \lvert A \rvert &amp; =  \lvert A_1 \cup A_2 \cup A_3 \rvert \\ 
  &amp; = \lvert A_1 \rvert + \lvert A_2 \rvert + \lvert A_3 \rvert - \textrm{repeats} \\
  &amp; = \lvert A_1 \rvert + \lvert A_2 \rvert + \lvert A_3 \rvert - \textrm{duplicates} + \textrm{triplicates}  \\
  &amp; = \lvert A_1 \rvert + \lvert A_2 \rvert + \lvert A_3 \rvert - (\lvert A_1 \cap A_2 \rvert + \lvert A_1 \cap A_3 \rvert+ \lvert A_2 \cap A_3 \rvert) + \lvert A_1 \cap A_2 \cap A_3 \rvert  \\
  &amp; = 75 + 60 + 55 - 25 - 12 - 15 + 10 = 148 \\
 \end{split}
-</me>
+</me></p>
 <p>Here's a truth table generated in LaTeX:
 <me>
 \begin{array}{cccc}
